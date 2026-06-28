@@ -1,0 +1,363 @@
+/* ==========================================================================
+   DESIGN SYSTEM — globals.css
+   Theme: Warm Apothecary Journal on Parchment (Function Design Spec)
+   Portfolio: Bintang Aditya Ramadhan
+   ========================================================================== */
+
+:root {
+  /* ── Colors ── */
+  --color-terracotta-seal:      #b05a36;
+  --gradient-terracotta-seal:   linear-gradient(116deg, rgb(176, 90, 54), rgb(212, 166, 142));
+  --color-parchment:            #fef9ef; /* Main canvas - warm cream */
+  --color-aged-paper:           #f5eee1; /* Card background - deeper cream */
+  --color-warm-taupe:           #d1c9bf; /* Hairline borders & outlines */
+  --color-ink:                  #2a2b2f; /* Primary text & heading fill */
+  --color-charcoal:             #333333; /* Body text & copy */
+  --color-graphite:             #515151; /* Muted helper text & metadata */
+  --color-ash:                  #808988; /* Input outlines & borders */
+  --color-pure-black:           #000000;
+
+  /* Alias mappings for unified theme reference */
+  --bg-primary:    var(--color-parchment);
+  --bg-secondary:  var(--color-aged-paper);
+  --bg-card:       var(--color-aged-paper);
+  --bg-card-hover: var(--color-parchment);
+  --border:        var(--color-warm-taupe);
+  --border-accent: var(--color-terracotta-seal);
+  --text-primary:  var(--color-ink);
+  --text-secondary:var(--color-charcoal);
+  --text-muted:    var(--color-graphite);
+  --accent:        var(--color-terracotta-seal);
+
+  /* ── Typography — Font Families ── */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body:    'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+
+  /* ── Typography — Scale ── */
+  --text-eyebrow: 12px;
+  --leading-eyebrow: 1.4;
+  --tracking-eyebrow: -0.28px;
+  
+  --text-body-sm: 14px;
+  --leading-body-sm: 1.5;
+  --tracking-body-sm: -0.32px;
+  
+  --text-body: 16px;
+  --leading-body: 1.5;
+  --tracking-body: -0.37px;
+  
+  --text-body-lg: 18px;
+  --leading-body-lg: 1.4;
+  --tracking-body-lg: -0.41px;
+  
+  --text-subheading: 20px;
+  --leading-subheading: 1.3;
+  --tracking-subheading: -0.46px;
+  
+  --text-heading: 34px;
+  --leading-heading: 1.15;
+  
+  --text-heading-lg: 45px;
+  --leading-heading-lg: 1.1;
+  
+  --text-display: 64px;
+  --leading-display: 1;
+  
+  --text-hero: 80px;
+  --leading-hero: 0.95;
+
+  /* ── Transitions ── */
+  --transition-base: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Border Radius ── */
+  --radius-sm:      2px;
+  --radius-xl:      12px;
+  --radius-nav:     12px;
+  --radius-cards:   24px;
+  --radius-pills:   9999px;
+  --radius-inputs:  9999px;
+  --radius-buttons: 40px;
+  
+  /* Backward-compatible references */
+  --radius-md:      var(--radius-xl);
+  --radius-lg:      var(--radius-cards);
+  --radius-full:    var(--radius-pills);
+
+  /* ── Shadows ── */
+  --shadow-lg: rgba(0, 0, 0, 0.08) 0px 0px 20px 0px;
+  --shadow-xl: rgba(42, 43, 47, 0.08) 12px 32px 80px 0px;
+  --shadow-md: var(--shadow-lg);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* ── Dark Mode Palette ── */
+[data-theme="dark"] {
+  --color-terracotta-seal:      #c96b42; /* Brighter terracotta for dark bg contrast */
+  --gradient-terracotta-seal:   linear-gradient(116deg, rgb(201, 107, 66), rgb(232, 178, 152));
+  --color-parchment:            #1c1917; /* Main canvas — very dark warm brown */
+  --color-aged-paper:           #241f1b; /* Card background — slightly lighter */
+  --color-warm-taupe:           #3c3530; /* Hairline borders */
+  --color-ink:                  #f0e6d3; /* Primary text — warm off-white */
+  --color-charcoal:             #d4c5b0; /* Body text */
+  --color-graphite:             #9a8a78; /* Muted helper text */
+  --color-ash:                  #6a5e54; /* Input outlines */
+
+  --shadow-lg: rgba(0, 0, 0, 0.35) 0px 0px 20px 0px;
+  --shadow-xl: rgba(0, 0, 0, 0.45) 12px 32px 80px 0px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-parchment);
+  color: var(--color-charcoal);
+  line-height: 1.5;
+  letter-spacing: -0.023em; /* Humanist sans global tracking pull */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Typography Styles ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400; /* financiers displays are standard 400 weight */
+  color: var(--color-ink);
+  letter-spacing: normal; /* Do not track financier displays */
+}
+
+/* Typographic rhythm styles for mixed roman + italic */
+.text-italic-accent {
+  font-style: italic;
+  font-weight: 300;
+}
+
+p {
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  line-height: 1.5;
+  letter-spacing: -0.023em;
+}
+
+a {
+  color: var(--color-terracotta-seal);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+a:hover {
+  color: var(--color-ink);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+  letter-spacing: -0.023em;
+}
+
+/* Monospace fonts for tiny UI components */
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Layout Utilities ── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+/* Alternate background for visual separation between sections */
+.section--alt {
+  background: var(--color-aged-paper);
+}
+
+
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+/* ── Section pre-title: Eyebrow Label ── */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: var(--text-eyebrow);
+  font-weight: 600;
+  line-height: var(--leading-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-terracotta-seal);
+  margin-bottom: 12px;
+}
+
+.section-tag::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 1.5px;
+  background: var(--color-terracotta-seal);
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-family: var(--font-heading);
+  font-weight: 400;
+  color: var(--color-ink);
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+
+.section-subtitle {
+  font-size: var(--text-body);
+  font-weight: 400;
+  letter-spacing: var(--tracking-body);
+  color: var(--color-charcoal);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-buttons); /* 40px */
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  font-family: var(--font-body);
+  letter-spacing: -0.023em;
+  transition: var(--transition-base);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+/* Primary CTA Button: Filled terracotta background, white text */
+.btn-primary {
+  background: var(--color-terracotta-seal);
+  color: var(--color-parchment);
+}
+
+.btn-primary:hover {
+  background: var(--color-ink);
+  color: var(--color-parchment);
+  transform: translateY(-1px);
+}
+
+/* Outlined Secondary Button: Transparent background, terracotta border/text */
+.btn-outline {
+  background: transparent;
+  color: var(--color-terracotta-seal);
+  border: 1.5px solid var(--color-terracotta-seal);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  transform: translateY(-1px);
+}
+
+/* Ghost Text Button */
+.btn-ghost {
+  background: transparent;
+  color: var(--color-ink);
+  border: none;
+  padding: 8px 12px;
+}
+
+.btn-ghost:hover {
+  background: var(--color-aged-paper);
+  border-radius: var(--radius-xl);
+}
+
+/* ── Card — unified radius-cards: 24px ── */
+.card {
+  background: var(--color-aged-paper);
+  border: 1px solid var(--color-warm-taupe);
+  border-radius: var(--radius-cards);
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  border-color: var(--color-terracotta-seal);
+  background: var(--color-parchment);
+  transform: translateY(-2px);
+}
+
+/* ── Monospace Bullet Separator ── */
+.bullet-separator {
+  color: var(--color-terracotta-seal);
+  padding: 0 16px;
+  font-weight: bold;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--color-parchment); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-warm-taupe);
+  border-radius: 3px;
+}
+
+/* ── Dark mode: card hover inversion fix ── */
+/* In dark mode, card hover bg should be slightly lighter not darker */
+[data-theme="dark"] .card:hover {
+  background: var(--color-warm-taupe);
+  background: color-mix(in srgb, var(--color-aged-paper) 60%, var(--color-warm-taupe) 40%);
+  background: #2e2823;
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(176, 90, 54, 0.15); /* Terracotta subtle overlay selection */
+  color: var(--color-ink);
+}
+
+/* ── Responsive base ── */
+@media (max-width: 768px) {
+  .section          { padding: 64px 0; }
+  .section-header   { margin-bottom: 40px; }
+  .container        { padding: 0 20px; }
+}
+
+@media (max-width: 480px) {
+  .section          { padding: 52px 0; }
+  .container        { padding: 0 16px; }
+}

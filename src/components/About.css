@@ -1,0 +1,195 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── Image column ── */
+.about__image-col {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.about__image-wrap {
+  position: relative;
+  border-radius: var(--radius-cards); /* 24px */
+  overflow: hidden;
+  width: 100%;
+  max-width: 380px;
+  border: 1px solid var(--color-warm-taupe);
+  background: var(--color-aged-paper);
+}
+
+.about__image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-cards);
+  display: block;
+  filter: grayscale(4%);
+}
+
+/* Name + role label below photo */
+.about__photo-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  margin-top: 14px;
+  text-align: center;
+}
+
+.about__photo-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink);
+  letter-spacing: -0.023em;
+}
+
+.about__photo-role {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-graphite);
+}
+
+/* ── Text column ── */
+.about__text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  padding-top: 4px;
+}
+
+.about__title {
+  text-align: left;
+  margin: 0;
+}
+
+.about__bio {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-charcoal);
+}
+
+.about__bar {
+  width: 40px;
+  height: 1.5px;
+  background: var(--color-terracotta-seal);
+  margin-top: 4px;
+}
+
+/* ── Fact/Stats cards — Clean horizontal grid ── */
+.about__facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.about__fact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px 16px;
+  background: var(--color-aged-paper); /* Aged Paper */
+  border: 1px solid var(--color-warm-taupe); /* Warm Taupe Outline */
+  border-radius: var(--radius-cards); /* 24px */
+  transition: var(--transition-base);
+}
+
+.about__fact:hover {
+  border-color: var(--color-terracotta-seal);
+  background: var(--color-parchment);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.about__fact-icon {
+  color: var(--color-terracotta-seal);
+  display: flex;
+  font-size: 1.25rem;
+}
+
+.about__fact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.about__fact-label {
+  font-family: var(--font-mono); /* JetBrains Mono substitute */
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-graphite);
+}
+
+.about__fact-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink);
+  line-height: 1.35;
+}
+
+/* ── Responsive: tablet ── */
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about__image-col {
+    position: static;
+    align-items: center; /* Center image on mobile */
+  }
+
+  .about__image-wrap {
+    max-width: 200px; /* Constrain — not full width */
+    margin: 0 auto;
+  }
+
+  .about__facts {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+}
+
+/* ── Responsive: phone ── */
+@media (max-width: 600px) {
+  .about__facts {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .about__fact {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+  }
+
+  .about__fact-details {
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__image-wrap {
+    max-width: 160px; /* Smaller on phone — text is the focus */
+  }
+
+  .about__text-col {
+    align-items: flex-start;
+  }
+}

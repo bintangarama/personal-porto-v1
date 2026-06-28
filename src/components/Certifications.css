@@ -1,0 +1,96 @@
+.certs-section {
+  background: var(--color-aged-paper); /* Alternating section background */
+}
+
+.certs__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cert-card {
+  display: flex;
+  overflow: hidden;
+  background: var(--color-parchment); /* Elevated step up from Aged Paper section background */
+  border: 1px solid var(--color-warm-taupe);
+  border-radius: var(--radius-cards); /* 24px */
+  transition: var(--transition-base);
+}
+
+.cert-card:hover {
+  border-color: var(--color-terracotta-seal);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.cert-card__stripe {
+  width: 4px;
+  flex-shrink: 0;
+  border-radius: var(--radius-cards) 0 0 var(--radius-cards);
+}
+
+.cert-card__body {
+  padding: 20px 20px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.cert-card__top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2px;
+}
+
+.cert-card__check {
+  color: var(--color-terracotta-seal);
+  display: flex;
+}
+
+.cert-card__name {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 400;
+  color: var(--color-ink);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.cert-card__issuer {
+  font-size: 0.82rem;
+  color: var(--color-terracotta-seal);
+  font-weight: 600;
+  letter-spacing: -0.023em;
+}
+
+.cert-card__date {
+  font-family: var(--font-mono); /* Monospace small date */
+  font-size: 10px;
+  color: var(--color-graphite);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cert-card__verify {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-graphite);
+  margin-top: 6px;
+  transition: var(--transition-base);
+  text-decoration: none;
+  letter-spacing: -0.023em;
+}
+
+.cert-card__verify:hover {
+  color: var(--color-terracotta-seal);
+}
+
+@media (max-width: 480px) {
+  .certs__grid { grid-template-columns: 1fr; }
+}
