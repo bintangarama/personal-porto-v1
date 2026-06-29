@@ -57,7 +57,7 @@ export default function Hero() {
               </a>
               <a
                 id="hero-cta-cv"
-                href="/CV.pdf"
+                href="/public/CV.pdf"
                 download
                 className="btn btn-hero-outline"
               >
