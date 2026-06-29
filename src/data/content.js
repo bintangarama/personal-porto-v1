@@ -35,7 +35,7 @@ export const content = {
     about: {
       tag: "Tentang Saya",
       title: "Sedikit tentang saya",
-      bio: "Saya Bintang — mahasiswa Sistem Informasi yang juga bekerja sebagai Data Admin di perusahaan logistik nasional. Saya percaya bahwa data yang bersih dan sistem yang baik adalah fondasi bisnis yang kuat. Di luar pekerjaan, saya aktif membangun proyek web dan eksplorasi data untuk terus mengasah kemampuan teknis saya.",
+      bio: "Saya Bintang, mahasiswa Sistem Informasi yang aktif mengembangkan diri melalui berbagai proyek implementatif. Saya memiliki minat mendalam di bidang web development yang fungsional serta analisis data yang berorientasi pada pemecahan masalah. Saya selalu tertantang untuk mengeksplorasi dan menyelesaikan berbagai studi kasus menarik.",
       university: "Universitas Horizon Indonesia",
       major: "Sistem Informasi",
       status: "Mahasiswa Aktif",
@@ -49,7 +49,7 @@ export const content = {
       tag: "Keahlian",
       title: "Teknologi yang Saya Kuasai",
       subtitle:
-        "Stack yang saya pakai sehari-hari — dari membangun antarmuka web hingga menganalisis data.",
+        "Stack yang saya pakai sehari-hari — dari bikin UI sampai ngulik data.",
       web_label: "Web & Pengembangan",
       data_label: "Data & Analitik",
     },
@@ -59,7 +59,7 @@ export const content = {
       tag: "Proyek Web",
       title: "Proyek Pengembangan Web",
       subtitle:
-        "Proyek nyata yang sudah dibangun dan bisa dilihat kodenya — bukan sekadar latihan.",
+        "Proyek nyata yang bisa kamu cek kodenya — dibuat untuk menyelesaikan masalah sungguhan.",
       live: "Demo",
       code: "Kode",
     },
@@ -69,7 +69,7 @@ export const content = {
       tag: "Proyek Data",
       title: "Proyek Data & Analitik",
       subtitle:
-        "Dari klasifikasi machine learning hingga sistem pendukung keputusan — analisis yang punya dampak.",
+        "Dari klasifikasi machine learning sampai SPK berbasis fuzzy — analisis data yang punya tujuan jelas.",
       view: "Lihat Proyek",
       code: "Kode",
     },
@@ -78,8 +78,7 @@ export const content = {
     education: {
       tag: "Pendidikan",
       title: "Riwayat Pendidikan",
-      subtitle:
-        "Latar belakang akademik yang membentuk cara saya berpikir tentang sistem dan data.",
+      subtitle: "Perjalanan akademik saya.",
     },
 
     // ── Certifications ──
@@ -87,7 +86,7 @@ export const content = {
       tag: "Sertifikasi",
       title: "Sertifikasi & Penghargaan",
       subtitle:
-        "Bukti kompetensi teknis yang bisa diverifikasi langsung.",
+        "Sertifikat yang bisa langsung diverifikasi — tiap satu ada cerita belajarnya.",
       verify: "Verifikasi",
     },
 
@@ -96,7 +95,7 @@ export const content = {
       tag: "Pengalaman",
       title: "Pengalaman Kerja",
       subtitle:
-        "Pengalaman profesional yang mengajarkan saya cara kerja nyata di industri.",
+        "Pengalaman kerja yang ngajarin saya lebih banyak dari yang ada di buku teks.",
     },
 
     // ── Contact ──
@@ -104,7 +103,7 @@ export const content = {
       tag: "Kontak",
       title: "Hubungi Saya",
       subtitle:
-        "Terbuka untuk kolaborasi, diskusi proyek, atau sekadar berkenalan.",
+        "Terbuka untuk kolaborasi, diskusi teknis, atau ngobrol santai.",
       github: "GitHub",
       linkedin: "LinkedIn",
       email: "Email",
@@ -114,7 +113,7 @@ export const content = {
     footer: {
       made: "Dibuat dengan",
       in: "di Indonesia",
-      rights: "Hak cipta dilindungi",
+      rights: "",
     },
   },
 
@@ -151,7 +150,7 @@ export const content = {
     about: {
       tag: "About Me",
       title: "A little about me",
-      bio: "I'm Bintang — an Information Systems student who also works as a Data Admin at a national logistics company. I believe clean data and well-built systems are the foundation of any strong business. Outside of work, I actively build web projects and explore datasets to keep sharpening my technical edge.",
+      bio: "I'm Bintang, an Information Systems student actively developing myself through various hands-on projects. I have a deep interest in functional web development and problem-solving data analysis. I'm always challenged to explore and tackle interesting case studies.",
       university: "Universitas Horizon Indonesia",
       major: "Information Systems",
       status: "Active Student",
@@ -163,9 +162,8 @@ export const content = {
     // ── Skills ──
     skills: {
       tag: "Skills",
-      title: "Technologies I Work With",
-      subtitle:
-        "My daily stack — from building web interfaces to analyzing and making sense of data.",
+      title: "Tools I Use Daily",
+      subtitle: "My daily stack — from shipping UIs to digging through data.",
       web_label: "Web & Development",
       data_label: "Data & Analytics",
     },
@@ -175,7 +173,7 @@ export const content = {
       tag: "Web Projects",
       title: "Web Development Projects",
       subtitle:
-        "Real projects you can inspect — not just exercises, but things built to solve actual problems.",
+        "Real projects you can inspect — built to solve real problems, not just for practice.",
       live: "Live Demo",
       code: "Source Code",
     },
@@ -185,7 +183,7 @@ export const content = {
       tag: "Data Projects",
       title: "Data & Analytics Projects",
       subtitle:
-        "From machine learning classification to decision support systems — analysis with real impact.",
+        "From ML classification to fuzzy-based DSS — data analysis with a clear purpose.",
       view: "View Project",
       code: "Source Code",
     },
@@ -194,16 +192,14 @@ export const content = {
     education: {
       tag: "Education",
       title: "Educational Background",
-      subtitle:
-        "The academic foundation that shapes how I think about systems, data, and problem-solving.",
+      subtitle: "Where I built the fundamentals.",
     },
 
     // ── Certifications ──
     certs: {
       tag: "Certifications",
       title: "Certifications & Awards",
-      subtitle:
-        "Verified technical competencies — click to validate any credential directly.",
+      subtitle: "Credentials you can verify — each one tied to real learning.",
       verify: "Verify",
     },
 
@@ -212,15 +208,14 @@ export const content = {
       tag: "Experience",
       title: "Work Experience",
       subtitle:
-        "Professional experience that taught me how real-world systems and operations actually run.",
+        "Where I learned that real systems are messier — and more interesting — than textbooks.",
     },
 
     // ── Contact ──
     contact: {
       tag: "Contact",
       title: "Get in Touch",
-      subtitle:
-        "Open for collaboration, project discussions, or just a friendly introduction.",
+      subtitle: "Open for collaboration, side projects, or just a quick hello.",
       github: "GitHub",
       linkedin: "LinkedIn",
       email: "Email",
@@ -230,7 +225,7 @@ export const content = {
     footer: {
       made: "Made with",
       in: "in Indonesia",
-      rights: "All rights reserved",
+      rights: "",
     },
   },
 };
@@ -300,10 +295,10 @@ export const dataProjects = [
     id: 3,
     title: "Student Grade Batch Converter",
     titleId: "Konversi Nilai Mahasiswa (Batch)",
-    desc: "Python CLI tool that batch-processes student score records from CSV and outputs letter grade classifications (A–E) with summary statistics.",
+    desc: "A Python program that converts numeric student scores into letter grades (A–E). Input a score, get a grade — straightforward classification logic, nothing more.",
     descId:
-      "Program CLI Python untuk memproses rekap nilai mahasiswa dari CSV dan menghasilkan konversi huruf (A–E) beserta statistik ringkasan secara otomatis.",
-    tech: ["Python", "CLI", "CSV Processing"],
+      "Program Python yang mengonversi nilai angka mahasiswa menjadi nilai huruf (A–E). Input angka, keluar grade — sesederhana itu.",
+    tech: ["Python"],
     github: "https://github.com/bintangarama/Konversi-Nilai-Mahasiswa",
     view: "https://github.com/bintangarama/Konversi-Nilai-Mahasiswa",
   },
@@ -313,7 +308,7 @@ export const dataProjects = [
 export const educationData = [
   {
     degree: "S1 Sistem Informasi",
-    degreeEn: "B.Sc. Information Systems",
+    degreeEn: "Information Systems",
     school: "Universitas Horizon Indonesia",
     period: "2023 – Sekarang",
     periodEn: "2023 – Present",
@@ -374,8 +369,8 @@ export const experienceData = [
     companyEn: "ASSA Rent (PT Adi Sarana Armada Tbk)",
     period: "Mar 2025 – Sekarang",
     periodEn: "Mar 2025 – Present",
-    type: "Internship",
-    typeEn: "Internship",
+    type: "Kontrak",
+    typeEn: "Contract",
     desc: "Mengelola dan menjaga integritas data master operasional armada kendaraan, mendukung akurasi data lintas departemen. Terlibat dalam validasi, pembersihan, dan penginputan data secara konsisten untuk memperlancar proses bisnis perusahaan.",
     descEn:
       "Managed and maintained the integrity of operational master data for a national vehicle fleet, supporting data accuracy across departments. Consistently involved in data validation, cleansing, and entry to streamline core business processes.",

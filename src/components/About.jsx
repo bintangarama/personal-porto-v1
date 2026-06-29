@@ -1,11 +1,11 @@
-import { motion } from 'framer-motion';
-import { HiAcademicCap, HiCode, HiUser } from 'react-icons/hi';
-import { useLang } from '../context/LangContext';
-import { content } from '../data/content';
-import './About.css';
+import { motion } from "framer-motion";
+import { HiAcademicCap, HiCode, HiUser } from "react-icons/hi";
+import { useLang } from "../context/LangContext";
+import { content } from "../data/content";
+import "./About.css";
 
 const fadeUp = {
-  hidden:  { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -14,9 +14,13 @@ export default function About() {
   const t = content[lang].about;
 
   const facts = [
-    { icon: <HiAcademicCap size={20} />, label: t.fact1_label, value: t.university },
-    { icon: <HiCode size={20} />,        label: t.fact2_label, value: t.major      },
-    { icon: <HiUser size={20} />,        label: t.fact3_label, value: t.status     },
+    {
+      icon: <HiAcademicCap size={20} />,
+      label: t.fact1_label,
+      value: t.university,
+    },
+    { icon: <HiCode size={20} />, label: t.fact2_label, value: t.major },
+    { icon: <HiUser size={20} />, label: t.fact3_label, value: t.status },
   ];
 
   return (
@@ -26,11 +30,15 @@ export default function About() {
           className="about__grid"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ staggerChildren: 0.15 }}
         >
           {/* Image column */}
-          <motion.div className="about__image-col" variants={fadeUp} transition={{ duration: 0.7 }}>
+          <motion.div
+            className="about__image-col"
+            variants={fadeUp}
+            transition={{ duration: 0.7 }}
+          >
             <div className="about__image-wrap">
               <img
                 src="/profile.png"
@@ -45,13 +53,19 @@ export default function About() {
             <div className="about__photo-caption">
               <span className="about__photo-name">Bintang Aditya Ramadhan</span>
               <span className="about__photo-role">
-                {lang === 'id' ? 'Web Dev & Data Analyst' : 'Web Dev & Data Analyst'}
+                  {lang === "id"
+                    ? "Builder & Data Nerd"
+                    : "Builder & Data Nerd"}
               </span>
             </div>
           </motion.div>
 
           {/* Text column */}
-          <motion.div className="about__text-col" variants={fadeUp} transition={{ duration: 0.7, delay: 0.1 }}>
+          <motion.div
+            className="about__text-col"
+            variants={fadeUp}
+            transition={{ duration: 0.7, delay: 0.1 }}
+          >
             <span className="section-tag">{t.tag}</span>
             <h2 className="section-title about__title">{t.title}</h2>
             <p className="about__bio">{t.bio}</p>
