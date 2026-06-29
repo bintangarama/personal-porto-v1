@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { HiArrowDown, HiDownload } from 'react-icons/hi';
-import { useLang } from '../context/LangContext';
-import { content } from '../data/content';
-import './Hero.css';
+import { motion } from "framer-motion";
+import { HiArrowDown, HiDownload } from "react-icons/hi";
+import { useLang } from "../context/LangContext";
+import { content } from "../data/content";
+import "./Hero.css";
 
 export default function Hero() {
   const { lang } = useLang();
@@ -10,13 +10,13 @@ export default function Hero() {
 
   const scrollToWork = (e) => {
     e.preventDefault();
-    document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
   };
 
   // Editorial Typographic Rhythm: split by * to italicize key phrases
-  const titleParts = t.title.split('*');
+  const titleParts = t.title.split("*");
   const mainTitle = titleParts[0];
-  const italicTitle = titleParts[1] ? titleParts[1].replace(/\./g, '') : '';
+  const italicTitle = titleParts[1] ? titleParts[1].replace(/\./g, "") : "";
 
   return (
     <section id="hero" className="hero hero--cinematic">
@@ -25,7 +25,6 @@ export default function Hero() {
 
       <div className="container hero__container">
         <div className="hero__content-wrap">
-          
           {/* Main Info (Bottom Left aligned) */}
           <motion.div
             className="hero__info"
@@ -34,9 +33,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             {/* Eyebrow badge style - translucent background */}
-            <span className="hero__eyebrow mono-label">
-              {t.greeting}
-            </span>
+            <span className="hero__eyebrow mono-label">{t.greeting}</span>
 
             {/* Massive editorial title */}
             <h1 className="hero__headline">
@@ -45,9 +42,7 @@ export default function Hero() {
             </h1>
 
             {/* Subtext */}
-            <p className="hero__description">
-              {t.tagline}
-            </p>
+            <p className="hero__description">{t.tagline}</p>
 
             {/* Action buttons */}
             <div className="hero__actions">
@@ -62,7 +57,7 @@ export default function Hero() {
               </a>
               <a
                 id="hero-cta-cv"
-                href="/cv.pdf"
+                href="/CV.pdf"
                 download
                 className="btn btn-hero-outline"
               >
@@ -83,7 +78,7 @@ export default function Hero() {
               <span className="hero__stat-number">{t.stat1_num}</span>
               <span className="hero__stat-label">{t.stat1_lbl}</span>
             </div>
-            
+
             <div className="hero__stat-divider" />
 
             <div className="hero__stat-item">
@@ -98,7 +93,6 @@ export default function Hero() {
               <span className="hero__stat-label">{t.stat3_lbl}</span>
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>
